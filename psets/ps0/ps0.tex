@@ -14,13 +14,13 @@ All sources of ideas, including (but not restricted to) any collaborators, AI to
 If you did not have any collaborators or external resources, please write 'none.' Please remember to select pages when you submit on Gradescope. A problem set on the border between two letter grades cannot be rounded up if pages are not selected.
 \newline
 
-\textbf{Your name: }
+\textbf{Your name:}  Joaquin de Castro
 
-\textbf{Collaborators and External Resources:}
+\textbf{Collaborators and External Resources:} None
 
-\textbf{No. of late days used on previous psets: }
+\textbf{No. of late days used on previous psets:} 0
 
-\textbf{No. of late days used after including this pset: }
+\textbf{No. of late days used after including this pset:} 0
 
 \vspace{1em}
 
@@ -121,8 +121,13 @@ then calling \texttt{calculate\_sizes(T.root)} should modify  \treeT\ to be the 
 
  Your program should run in time $O(n)$ when given the root of a tree with $n$ vertices. In a sentence or two, informally justify why your program has such a runtime.
 
+ Answer:
+
+Given a vertex v, the program recursively runs on the children of the input vertex, with an input vertex with no children returning 1. This effectively counts all of the vertices, and each vertex is taken as an input to the function exactly once, the run-time of this function is just the number of vertices.
+
 
     \item (proofs by induction) Let $t$ be a positive integer. Prove that every binary tree $\treeT$ of size at least $2t+1$ has a vertex $\btv$ such that the subtree rooted at $\btv$ has size at least $t$ and at most $2t-1$.  (Hint: use strong induction on the size $n$ of $\treeT$, starting with base case $n=2t+1$.  Remember that nodes in binary trees can have 2, 1, or 0 children.) \label{part:induction-tsize}
+    
 
     \item (from proofs to algorithms) Turn your proof from Part~\ref{part:induction-tsize} into a Python program \texttt{FindDescendantOfSize(t,v)} that, given a positive integer $\texttt{t}$ and a vertex \texttt{v} of a {\em size-augmented} tree \treeT\ such that $\texttt{v.size}\geq \texttt{2t+1}$, finds and returns a descendant  \texttt{w} of $\texttt{v}$ such that $\texttt{t}\leq \texttt{w.size} \leq \texttt{2t-1}$.   Your algorithm should run in time $O(h)$, where $h$ is the height of the subtree rooted at $\texttt{v}$; explain in words why this is the case.
 
