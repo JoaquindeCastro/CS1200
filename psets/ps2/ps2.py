@@ -56,12 +56,17 @@ class BinarySearchTree:
         left_size = 0
         if self.left is not None:
             left_size = self.left.size
-        if ind == left_size:
+        if ind == left_size: # that node has left_size elements less than it
             return self
         if left_size > ind and self.left is not None:
+            #print(f'too small moving left from {self.key} to {self.left.key}')
             return self.left.select(ind)
         if left_size < ind and self.right is not None:
-            return self.right.select(ind)
+            # self.right already has left_size+1 things smaller than it
+            # so now when we move to the self.right branch, we just want to find the node that has ind-left_size-1 things smaller than it 
+            #print('want bigger')
+            #print(f'from {self.key} went to {self.right.key}')
+            return self.right.select(ind-left_size-1)
         return None
 
 
@@ -127,7 +132,53 @@ class BinarySearchTree:
        11 
     '''
     def rotate(self, direction, child_side):
-        # Your code goes here
+        if child_side == "L":
+            x = self.left
+        elif child_side=="R":
+            x = self.right
+        else:
+            print('error bad child_side')
+
+        if direction == "L":
+            y = x.right
+        elif direction == 'R':
+            y = x.left
+
+        if direction == "L":
+            A = x.left
+            B = y.left
+            C = y.right
+            # replace x with y
+            if child_side == "L":
+                self.left = y
+            if child_side == "R":
+                self.right = y
+            y.left = x
+            x.right = B
+            # fix sizes
+            Asize= A.size if A else 0
+            Bsize= B.size if B else 0
+            Csize= C.size if C else 0
+            x.size = Asize+Bsize+1
+            y.size = x.size+Csize+1
+        if direction == "R":
+            A = y.left
+            B = y.right
+            C = x.right
+            # replace x with y
+            if child_side == "L":
+                self.left = y
+            if child_side == "R":
+                self.right = y
+            y.right = x
+            x.left = B
+            # fix sizes
+            Asize= A.size if A else 0
+            Bsize= B.size if B else 0
+            Csize= C.size if C else 0
+            x.size = Bsize+Csize+1
+            y.size = x.size+Asize+1
+
         return self
 
     def print_bst(self):
@@ -136,4 +187,12 @@ class BinarySearchTree:
         print( self.key),
         if self.right is not None:
             self.right.print_bst()
+        return self
+    def printb(self):
+        if self.left is not None:
+            print(f'{self.key} has left child: {self.left.key} with size {self.left.size}')
+            self.left.printb()
+        if self.right is not None:
+            print(f'{self.key} has right child: {self.right.key} with size {self.right.size}')
+            self.right.printb()
         return self
