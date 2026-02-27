@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1771383251.99693 "c:/Users/jgmad/harvard/CS1200/psets/ps2/ps2.tex" "ps2.pdf" "ps2" 1771383254.89151 0
+["pdflatex"] 1771383693.32522 "c:/Users/jgmad/harvard/CS1200/psets/ps2/ps2.tex" "ps2.pdf" "ps2" 1771383696.2958 0
   "3A1.jpeg" 1771382899 173154 ae9cf5dbee38fcb44d9c2e4aa1f53dde ""
   "3A2.jpeg" 1771382897 299611 26c6c526694f5bd778bdcaf7e46e3e04 ""
   "IntroAlgorithmsAndLimitations.sty" 1770755498 30635 74552dc5c189d85310e7f873e89e59cd ""
-  "c:/Users/jgmad/harvard/CS1200/psets/ps2/ps2.tex" 1771383246 14537 f156cb8c4c5979d9cbc8e894d7df85d4 ""
+  "c:/Users/jgmad/harvard/CS1200/psets/ps2/ps2.tex" 1771383691 15165 9db27e86fe2a6bb1feb40ee0942eaeed ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1769905582 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1769907506 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1769906709 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -207,9 +207,9 @@
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1769919921 3636142 04200f94242f616efc7acd1ca78e6c64 ""
   "c:/texlive/2025/texmf.cnf" 1769918699 713 e69b156964470283e0530f5060668171 ""
   "cs1200.sty" 1771379972 5529 1362ec859be6724c8c174a425ec56d77 ""
-  "ps2.aux" 1771383254 287 d57c277cadeccd661e5de49fda03d033 "pdflatex"
-  "ps2.out" 1771383254 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "ps2.tex" 1771383246 14537 f156cb8c4c5979d9cbc8e894d7df85d4 ""
+  "ps2.aux" 1771383695 287 d57c277cadeccd661e5de49fda03d033 "pdflatex"
+  "ps2.out" 1771383695 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "ps2.tex" 1771383691 15165 9db27e86fe2a6bb1feb40ee0942eaeed ""
   (generated)
   "ps2.aux"
   "ps2.log"
